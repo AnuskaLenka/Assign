@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <form>
+        <input type="text", name="n1", placeholder="Num1">
+        <input type="text", name="n2", placeholder="Num2">
+
+        <select name="operation">
+            <option>add</option>
+            <option>sub</option>
+            <option>mul</option>
+            <option>div</option>
+        </select>
+        <select name="float">
+            <option>Float</option>
+        </select>
+        <br>
+        <button type="submit" name="submit" value="submit">calculate</button>
+    </form>
+    <p>Answer:</p>
+
+    <?php
+
+    if (isset($_GET['submit'])) {
+        $result1 = $_GET['n1'];
+        $result2 = $_GET['n2'];
+
+        
+
+        $operation = $_GET['operation'];
+        switch($operation) {
+
+            case "add":
+                echo $result1+$result2;
+            break;
+
+            case "sub":
+                echo $result1-$result2;
+            break;
+
+            case "mul":
+                echo $result1*$result2;;
+            break;
+
+            case "div":
+                echo $result1/$result2;;
+            break;
+
+            if($float=='float'){
+              
+                if($operation=='add'){
+                    $add=$num1+$num2;
+                          
+                }
+                else if($operation=='Sub'){
+                    $sub=$num1-$num2;
+                    
+                }
+                else if($operation=='Mul'){
+                    $mul=$num1*$num2;
+                    
+                }
+                else if ($operation=='Div'){
+                    $div=$num1/$num2;
+                    
+                }
+                else{
+                    echo "Invalid choice";
+                }
+            }
+
+
+
+        }
+        
+
+
+    }
+
+    ?>   
+</body>
+</html>
