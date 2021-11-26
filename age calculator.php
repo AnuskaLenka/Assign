@@ -146,27 +146,27 @@
         $year =$_POST["year"];
         $curent_day = date('day');
         $curent_month = date('month');
-        $curent_year = date('Y');
+        $curent_year = date('Year');
 
         echo'<br>';
         echo '<b> Your Age :  </b>';
 
         $age = $curent_year - $year;
-        echo "year " . $age;
-        $remainingmonth = 0;
+        echo "year " . $year;
+        $rmonth = 0;
         if ($Current_month < $month) {
-            $remainingmonth = $month - $Current_month;
+            $month = $month - $Current_month;
         } else {
-            $remainingmonth = $Current_month - $month;
+            $month = $Current_month - $month;
         }
-        echo " month is " . $remainingmonth;
-        $remainingday = 0;
+        echo " month is " . $month;
+        $day = 0;
         if ($curent_day < $day) {
-            $remainingday = $day - $curent_day;
+            $day = $day - $curent_day;
         } else {
-            $remainingday = $curent_day - $day;
+            $day = $curent_day - $day;
         }
-        echo " day " . $remainingday;
+        echo " day " . $day;
     }
         ?>
 </body>

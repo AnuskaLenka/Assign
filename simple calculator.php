@@ -30,9 +30,6 @@
     if (isset($_GET['submit'])) {
         $result1 = $_GET['n1'];
         $result2 = $_GET['n2'];
-
-        
-
         $operation = $_GET['operation'];
         switch($operation) {
 
@@ -51,6 +48,7 @@
             case "div":
                 echo $result1/$result2;;
             break;
+            
 
             if($float=='float'){
               
